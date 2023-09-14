@@ -21,8 +21,11 @@ const HomeHeader: React.FC = () => {
         </a>
         <NavLink
           to={"/contact"}
-          className="homeheader-navbar homeheader-navbar-second"
-          activeClassName="homeheader-navbar homeheader-navbar-activ"
+          className={({ isActive }) =>
+            isActive
+              ? "homeheader-navbar homeheader-navbar-activ"
+              : "homeheader-navbar homeheader-navbar-second"
+          }
         >
           KONTAKT
         </NavLink>
