@@ -24,7 +24,7 @@ const HomeFooter: React.FC = () => {
             to={"/about-us"}
             className={({ isActive }) =>
               isActive
-                ? "homefooter-navbar homefooter-navbar-activ"
+                ? "homefooter-navbar homefooter-navbar-activ homefooter-navbar-second"
                 : "homefooter-navbar homefooter-navbar-second"
             }
           >
@@ -35,7 +35,7 @@ const HomeFooter: React.FC = () => {
             to={"/privacy"}
             className={({ isActive }) =>
               isActive
-                ? "homefooter-navbar homefooter-navbar-activ"
+                ? "homefooter-navbar homefooter-navbar-activ homefooter-navbar-second"
                 : "homefooter-navbar homefooter-navbar-second"
             }
           >
@@ -46,7 +46,7 @@ const HomeFooter: React.FC = () => {
             to={"/legal-notice"}
             className={({ isActive }) =>
               isActive
-                ? "homefooter-navbar homefooter-navbar-activ"
+                ? "homefooter-navbar homefooter-navbar-activ homefooter-navbar-second"
                 : "homefooter-navbar homefooter-navbar-second"
             }
           >

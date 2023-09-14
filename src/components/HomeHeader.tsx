@@ -23,7 +23,7 @@ const HomeHeader: React.FC = () => {
           to={"/contact"}
           className={({ isActive }) =>
             isActive
-              ? "homeheader-navbar homeheader-navbar-activ"
+              ? "homeheader-navbar homeheader-navbar-second homeheader-navbar-activ"
               : "homeheader-navbar homeheader-navbar-second"
           }
         >
