@@ -22,33 +22,24 @@ const HomeFooter: React.FC = () => {
           <NavLink
             id="about-us-bottom"
             to={"/about-us"}
-            className={({ isActive }) =>
-              isActive
-                ? "homefooter-navbar homefooter-navbar-activ"
-                : "homefooter-navbar homefooter-navbar-second"
-            }
+            className="homefooter-navbar"
+            activeClassName="homefooter-navbar homefooter-navbar-activ"
           >
             Über uns
           </NavLink>
           <NavLink
             id="privacy-bottom"
             to={"/privacy"}
-            className={({ isActive }) =>
-              isActive
-                ? "homefooter-navbar homefooter-navbar-activ"
-                : "homefooter-navbar homefooter-navbar-second"
-            }
+            className="homefooter-navbar homefooter-navbar-second"
+            activeClassName="homefooter-navbar homefooter-navbar-activ"
           >
             Datenschutz
           </NavLink>
           <NavLink
             id="legal-notice-bottom"
             to={"/legal-notice"}
-            className={({ isActive }) =>
-              isActive
-                ? "homefooter-navbar homefooter-navbar-activ"
-                : "homefooter-navbar homefooter-navbar-second"
-            }
+            className="homefooter-navbar homefooter-navbar-second"
+            activeClassName="homefooter-navbar homefooter-navbar-activ"
           >
             Impressum
           </NavLink>
