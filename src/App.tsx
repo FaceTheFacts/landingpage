@@ -1,9 +1,13 @@
 import Spinner from "./components/Spinner/Spinner";
-import { animationBuilder } from "./utils/animation-builder";
 
 /* Theme variables */
 import "./theme/variables.css";
-import { IonApp, IonRouterOutlet, IonSplitPane } from "@ionic/react";
+import {
+  IonApp,
+  IonRouterOutlet,
+  IonSplitPane,
+  setupIonicReact,
+} from "@ionic/react";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -22,30 +26,38 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/typography.css";
 import log from "loglevel";
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
+import { animationBuilder } from "./utils/animation-builder";
+import { IonReactRouter } from "@ionic/react-router";
 
-const Home = React.lazy(() => import("./pages/Home"));
+setupIonicReact();
+
+const Home = React.lazy(() => import("./pages/Home/Home"));
 const AboutUs = React.lazy(() => import("./pages/AboutUs/AboutUs"));
 const Contact = React.lazy(() => import("./pages/Contact/Contact"));
-const LegalNotice = React.lazy(() => import("./pages/Legal_Notice"));
-const AppPrivacy = React.lazy(() => import("./pages/App_Privacy"));
-const Privacy = React.lazy(() => import("./pages/Privacy"));
+const LegalNotice = React.lazy(
+  () => import("./pages/Legal_Notice/Legal_Notice")
+);
+const AppPrivacy = React.lazy(() => import("./pages/Privacy/App_Privacy"));
+const Privacy = React.lazy(() => import("./pages/Privacy/Privacy"));
 
 const App: React.FC = () => {
   log.setLevel("DEBUG", true);
   return (
     <IonApp>
       <Suspense fallback={<Spinner />}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/legal-notice" element={<LegalNotice />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/app/privacy" element={<AppPrivacy />} />
-          </Routes>
-        </Router>
+        <IonReactRouter>
+          <IonSplitPane contentId="main">
+            <IonRouterOutlet id="main" animation={animationBuilder}>
+              <Route path="/" exact component={Home} />
+              <Route path="/about-us" exact component={AboutUs} />
+              <Route path="/contact" exact component={Contact} />
+              <Route path="/legal-notice" exact component={LegalNotice} />
+              <Route path="/privacy" exact component={Privacy} />
+              <Route path="/app/privacy" exact component={AppPrivacy} />
+            </IonRouterOutlet>
+          </IonSplitPane>
+        </IonReactRouter>
       </Suspense>
     </IonApp>
   );
