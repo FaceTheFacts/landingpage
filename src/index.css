@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+	font-family: 'inter';
+	src: url(./assets/fonts/Inter/inter-v3-latin-regular.ttf) format('opentype'),
+		url(./assets/fonts/Inter/inter-v3-latin-regular.woff2) format('woff2'),
+		url(./assets/fonts/Inter/inter-v3-latin-regular.woff) format('woff'),
+		url(./assets/fonts/Inter/inter-v3-latin-regular.svg) format('svg'),
+		url(./assets/fonts/Inter/inter-v3-latin-regular.eot) format('embedded-opentype');
+	font-display: auto;
+	font-style: normal;
+	font-weight: 400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+	font-family: 'inter';
+	src: url(./assets/fonts/Inter/inter-v3-latin-600.ttf) format('opentype'),
+		url(./assets/fonts/Inter/inter-v3-latin-600.woff2) format('woff2'),
+		url(./assets/fonts/Inter/inter-v3-latin-600.woff) format('woff'),
+		url(./assets/fonts/Inter/inter-v3-latin-600.svg) format('svg'),
+		url(./assets/fonts/Inter/inter-v3-latin-600.eot) format('embedded-opentype');
+	font-display: auto;
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'inter';
+	src: url(./assets/fonts/Inter/inter-v3-latin-700.ttf) format('opentype'),
+		url(./assets/fonts/Inter/inter-v3-latin-700.woff2) format('woff2'),
+		url(./assets/fonts/Inter/inter-v3-latin-700.woff) format('woff'),
+		url(./assets/fonts/Inter/inter-v3-latin-700.svg) format('svg'),
+		url(./assets/fonts/Inter/inter-v3-latin-700.eot) format('embedded-opentype');
+	font-display: auto;
+	font-style: normal;
+	font-weight: 700;
+}
+
+ion-content {
+	--background: #181924;
 }
