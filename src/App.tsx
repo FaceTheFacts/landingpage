@@ -2,12 +2,7 @@ import Spinner from "./components/Spinner/Spinner";
 
 /* Theme variables */
 import "./theme/variables.css";
-import {
-  IonApp,
-  IonRouterOutlet,
-  IonSplitPane,
-  setupIonicReact,
-} from "@ionic/react";
+import { IonApp, setupIonicReact } from "@ionic/react";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -26,9 +21,7 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/typography.css";
 import log from "loglevel";
 import React, { Suspense } from "react";
-import { Route } from "react-router-dom";
-import { animationBuilder } from "./utils/animation-builder";
-import { IonReactRouter } from "@ionic/react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 setupIonicReact();
 
@@ -46,18 +39,16 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <Suspense fallback={<Spinner />}>
-        <IonReactRouter>
-          <IonSplitPane contentId="main">
-            <IonRouterOutlet id="main" animation={animationBuilder}>
-              <Route path="/" exact component={Home} />
-              <Route path="/about-us" exact component={AboutUs} />
-              <Route path="/contact" exact component={Contact} />
-              <Route path="/legal-notice" exact component={LegalNotice} />
-              <Route path="/privacy" exact component={Privacy} />
-              <Route path="/app/privacy" exact component={AppPrivacy} />
-            </IonRouterOutlet>
-          </IonSplitPane>
-        </IonReactRouter>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/legal-notice" element={<LegalNotice />} />
+            <Route path="/app/privacy" element={<AppPrivacy />} />
+            <Route path="/privacy" element={<Privacy />} />
+          </Routes>
+        </BrowserRouter>
       </Suspense>
     </IonApp>
   );
