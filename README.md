@@ -1,6 +1,6 @@
 # Face the Facts
 
-This repository contains the [landingpage]("https://facethefacts.app") of Face The Facts.
+This repository contains the [landingpage](https://facethefacts.app) of Face The Facts.
 
 ## Installation
 
