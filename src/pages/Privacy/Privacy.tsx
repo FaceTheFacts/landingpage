@@ -1,4 +1,4 @@
-import { IonApp, IonContent } from "@ionic/react";
+import { IonContent, IonPage } from "@ionic/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import HomeFooter from "../../components/HomeFooter";
@@ -7,7 +7,7 @@ import "./Privacy.css";
 
 /* Define the React component (FC stands for Functional Components, as opposed to class-based components) */
 const Privacy: React.FC = () => (
-  <IonApp>
+  <IonPage>
     <HomeHeader />
     <IonContent>
       <div className="privacy">
@@ -421,7 +421,7 @@ const Privacy: React.FC = () => (
       </div>
       <HomeFooter />
     </IonContent>
-  </IonApp>
+  </IonPage>
 );
 
 export default Privacy;
