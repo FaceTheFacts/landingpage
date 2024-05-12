@@ -21,7 +21,7 @@ const Privacy: React.FC = () => (
         <br />
         <br />
         (2) Verantwortlicher gem. Art. 4 Abs. 7 EU-Datenschutz-Grundverordnung
-        (DS-GVO) ist die Bellu, Köditz, Krümmel GbR, Zähringer Straße 17, 10707
+        (DS-GVO) ist die Bellu, Köditz, Krümmel GbR, Dunckerstraße 90A 10437
         Berlin, vertreten durch den Geschäftsführer Victor Bellu,
         info@facethefacts.app (siehe Impressum). Unseren Datenschutzbeauftragten
         erreichen Sie unter victor.bellu@code.berlin oder unter unserer

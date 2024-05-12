@@ -15,9 +15,9 @@ const LegalNotice: React.FC = () => (
         <p>
           GbR Bellu, Köditz und Krümmel
           <br />
-          Z&auml;hringerstra&szlig;e 17
+          Dunckerstraße 90A
           <br />
-          10707 Berlin
+          10437 Berlin
         </p>
         <h2>Kontakt</h2>
         <p>
